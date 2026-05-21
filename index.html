@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VANMO.RUN — Voluntariado em corridas de rua</title>
+  <meta name="description" content="Conectamos voluntários apaixonados por corrida aos maiores eventos esportivos do Brasil.">
+  <meta name="author" content="VANMO.RUN">
+  <meta property="og:title" content="VANMO.RUN — Voluntariado em corridas de rua">
+  <meta property="og:description" content="Conectamos voluntários apaixonados por corrida aos maiores eventos esportivos do Brasil.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@vanmorun">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="min-h-screen">
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        VANMO<span class="highlight">.RUN</span>
+      </a>
+      <div class="nav-links">
+        <a href="#como-funciona" data-i18n="nav.howItWorks">Como funciona</a>
+        <a href="#beneficios" data-i18n="nav.benefits">Benefícios</a>
+        <a href="#funcoes" data-i18n="nav.roles">Funções</a>
+        <a href="#organizadores" data-i18n="nav.organizers">Organizadores</a>
+      </div>
+      <div class="nav-actions">
+        <label class="lang-switcher">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span class="sr-only" data-i18n="language.label">Idioma</span>
+          <span id="current-lang" aria-hidden="true">PT</span>
+          <select id="lang-select" aria-label="Idioma">
+            <option value="pt">PT</option>
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+            <option value="fr">FR</option>
+          </select>
+        </label>
+        <button class="btn-login" data-i18n="nav.login">Entrar</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-headline">
+            <span data-i18n="hero.headlineBefore">Conectamos voluntários apaixonados por corrida aos </span>
+            <span class="highlight" data-i18n="hero.headlineHighlight">maiores eventos</span>
+            <span data-i18n="hero.headlineAfter"> esportivos.</span>
+          </h1>
+          <p class="hero-sub" data-i18n="hero.subheadline">Organize equipes, encontre oportunidades e transforme eventos em experiências memoráveis.</p>
+          <div class="hero-buttons">
+            <button class="btn-primary" data-i18n="hero.ctaVolunteer">Quero ser voluntário</button>
+            <button class="btn-outline" data-i18n="hero.ctaOrganizer">Sou organizador de eventos</button>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="assets/hero-volunteers.jpg" alt="" data-i18n-attr="alt:hero.imageAlt" width="1280" height="960">
+          <div class="hero-badge">#VANMORUN</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <span class="stat-value">+500</span>
+          <span class="stat-label" data-i18n="stats.volunteers">Voluntários ativos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">+50</span>
+          <span class="stat-label" data-i18n="stats.events">Eventos realizados</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">+20K</span>
+          <span class="stat-label" data-i18n="stats.athletes">Atletas atendidos</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section id="como-funciona" class="how">
+      <h2 class="how-title" data-i18n="how.title">Como funciona a jornada</h2>
+      <div class="how-grid">
+        <div>
+          <h3 class="how-col-title volunteer" data-i18n="how.volunteerTitle">Para Voluntários</h3>
+          <ol class="how-steps">
+            <li class="how-step">
+              <span class="how-step-number">01</span>
+              <div>
+                <p class="how-step-title" data-i18n="how.volunteerSteps.0.t">Crie seu perfil</p>
+                <p class="how-step-desc" data-i18n="how.volunteerSteps.0.d">Cadastre suas informações e interesses esportivos.</p>
+              </div>
+            </li>
+            <li class="how-step">
+              <span class="how-step-number">02</span>
+              <div>
+                <p class="how-step-title" data-i18n="how.volunteerSteps.1.t">Escolha eventos</p>
+                <p class="how-step-desc" data-i18n="how.volunteerSteps.1.d">Filtre provas por data, cidade e função.</p>
+              </div>
+            </li>
+            <li class="how-step">
+              <span class="how-step-number">03</span>
+              <div>
+                <p class="how-step-title" data-i18n="how.volunteerSteps.2.t">Receba sua escala</p>
+                <p class="how-step-desc" data-i18n="how.volunteerSteps.2.d">Treinamento digital e cronograma definidos.</p>
+              </div>
+            </li>
+            <li class="how-step">
+              <span class="how-step-number">04</span>
+              <div>
+                <p class="how-step-title" data-i18n="how.volunteerSteps.3.t">Check-in no dia</p>
+                <p class="how-step-desc" data-i18n="how.volunteerSteps.3.d">Confirme sua presença com QR Code no local.</p>
+              </div>
+            </li>
+            <li class="how-step">
+              <span class="how-step-number">05</span>
+              <div>
+                <p class="how-step-title" data-i18n="how.volunteerSteps.4.t">Certificado e benefícios</p>
+                <p class="how-step-desc" data-i18n="how.volunteerSteps.4.d">Garanta seu kit, certificado e horas complementares.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <h3 class="how-col-title organizer" data-i18n="how.organizerTitle">Para Organizadores</h3>
+          <ol class="how-steps">
+            <li class="how-step">
+              <span class="how-step-number">01</span>
+              <div>
+                <p class="how-step-title" data-i18n="how.organizerSteps.0.t">Cadastre o evento</p>
+                <p class="how-step-desc" data-i18n="how.organizerSteps.0.d">Publique data, local e necessidades do staff.</p>
+              </div>
+            </li>
+            <li class="how-step">
+              <span class="how-step-number">02</span>
+              <div>
+                <p class="how-step-title" data-i18n="how.organizerSteps.1.t">Defina funções</p>
+                <p class="how-step-desc" data-i18n="how.organizerSteps.1.d">Quantidade, horários e perfis ideais para cada posto.</p>
+              </div>
+            </li>
+            <li class="how-step">
+              <span class="how-step-number">03</span>
+              <div>
+                <p class="how-step-title" data-i18n="how.organizerSteps.2.t">Recrute voluntários</p>
+                <p class="how-step-desc" data-i18n="how.organizerSteps.2.d">Acesse uma base qualificada e selecione rapidamente.</p>
+              </div>
+            </li>
+            <li class="how-step">
+              <span class="how-step-number">04</span>
+              <div>
+                <p class="how-step-title" data-i18n="how.organizerSteps.3.t">Comunicação e presença</p>
+                <p class="how-step-desc" data-i18n="how.organizerSteps.3.d">Mensagens em massa e check-in digital integrado.</p>
+              </div>
+            </li>
+            <li class="how-step">
+              <span class="how-step-number">05</span>
+              <div>
+                <p class="how-step-title" data-i18n="how.organizerSteps.4.t">Acompanhe relatórios</p>
+                <p class="how-step-desc" data-i18n="how.organizerSteps.4.d">Métricas de presença, performance e satisfação.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VALUE VOLUNTEERS ===== -->
+    <section id="beneficios" class="value-volunteers">
+      <div class="value-volunteers-inner">
+        <div class="value-header">
+          <div>
+            <p class="value-eyebrow" data-i18n="valueVolunteers.eyebrow">Para voluntários</p>
+            <h2 class="value-title" data-i18n="valueVolunteers.title">Mais do que ajudar: viva os bastidores do esporte.</h2>
+          </div>
+          <p class="value-aside" data-i18n="valueVolunteers.aside">Participação em grandes eventos, alimentação inclusa, ranking de voluntários e recorrência em provas.</p>
+        </div>
+        <div class="value-grid">
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="4"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+              </svg>
+            </div>
+            <h4 class="value-card-title" data-i18n="valueVolunteers.items.0.title">Medalha</h4>
+            <p class="value-card-desc" data-i18n="valueVolunteers.items.0.desc">Reconhecimento exclusivo de staff.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.38 1.9v.08a2 2 0 0 0 1 1.74l6.38 3.7a2 2 0 0 0 1.38.32h2a2 2 0 0 0 1.38-.32l6.38-3.7a2 2 0 0 0 1-1.74v-.08a2 2 0 0 0-1.38-1.9Z"/><path d="M12 2v13"/>
+              </svg>
+            </div>
+            <h4 class="value-card-title" data-i18n="valueVolunteers.items.1.title">Kit do voluntário</h4>
+            <p class="value-card-desc" data-i18n="valueVolunteers.items.1.desc">Camisa oficial, boné e brindes.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h4 class="value-card-title" data-i18n="valueVolunteers.items.2.title">Certificado</h4>
+            <p class="value-card-desc" data-i18n="valueVolunteers.items.2.desc">Horas complementares e validação oficial.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h4 class="value-card-title" data-i18n="valueVolunteers.items.3.title">Networking</h4>
+            <p class="value-card-desc" data-i18n="valueVolunteers.items.3.desc">Conexão com marcas e organizadores.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h4 class="value-card-title" data-i18n="valueVolunteers.items.4.title">Experiência</h4>
+            <p class="value-card-desc" data-i18n="valueVolunteers.items.4.desc">Bastidores dos maiores eventos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VALUE ORGANIZERS ===== -->
+    <section id="organizadores" class="value-organizers">
+      <div class="value-organizers-inner">
+        <div class="value-header">
+          <div>
+            <p class="value-eyebrow" data-i18n="valueOrganizers.eyebrow">Para organizadores</p>
+            <h2 class="value-title" data-i18n="valueOrganizers.title">Gestão inteligente de voluntários para eventos esportivos.</h2>
+          </div>
+          <p class="value-aside" data-i18n="valueOrganizers.aside">Redução de custos operacionais, gestão centralizada e histórico completo de cada voluntário.</p>
+        </div>
+        <div class="value-grid">
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+              </svg>
+            </div>
+            <h4 class="value-card-title" data-i18n="valueOrganizers.items.0.title">Base qualificada</h4>
+            <p class="value-card-desc" data-i18n="valueOrganizers.items.0.desc">Voluntários com histórico e avaliações.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h4 class="value-card-title" data-i18n="valueOrganizers.items.1.title">Escalas automatizadas</h4>
+            <p class="value-card-desc" data-i18n="valueOrganizers.items.1.desc">Distribuição inteligente por função e horário.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <h4 class="value-card-title" data-i18n="valueOrganizers.items.2.title">Comunicação em massa</h4>
+            <p class="value-card-desc" data-i18n="valueOrganizers.items.2.desc">Mensagens segmentadas para cada equipe.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="5" height="5"/><rect x="16" y="3" width="5" height="5"/><rect x="3" y="16" width="5" height="5"/><path d="M21 16v3h-3"/><path d="M10 3v5h5"/><path d="M16 21v-4h-4"/>
+              </svg>
+            </div>
+            <h4 class="value-card-title" data-i18n="valueOrganizers.items.3.title">Check-in digital</h4>
+            <p class="value-card-desc" data-i18n="valueOrganizers.items.3.desc">Controle de presença em tempo real.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/>
+              </svg>
+            </div>
+            <h4 class="value-card-title" data-i18n="valueOrganizers.items.4.title">Relatórios pós-evento</h4>
+            <p class="value-card-desc" data-i18n="valueOrganizers.items.4.desc">Taxa de comparecimento e desempenho.</p>
+          </div>
+        </div>
+        <div class="kpis">
+          <div>
+            <div class="kpi-value" data-i18n="valueOrganizers.kpis.0.v">-40%</div>
+            <div class="kpi-label" data-i18n="valueOrganizers.kpis.0.l">Custo operacional</div>
+          </div>
+          <div>
+            <div class="kpi-value" data-i18n="valueOrganizers.kpis.1.v">98%</div>
+            <div class="kpi-label" data-i18n="valueOrganizers.kpis.1.l">Taxa de comparecimento</div>
+          </div>
+          <div>
+            <div class="kpi-value" data-i18n="valueOrganizers.kpis.2.v">72h</div>
+            <div class="kpi-label" data-i18n="valueOrganizers.kpis.2.l">Tempo médio de recrutamento</div>
+          </div>
+          <div>
+            <div class="kpi-value" data-i18n="valueOrganizers.kpis.3.v">100%</div>
+            <div class="kpi-label" data-i18n="valueOrganizers.kpis.3.l">Histórico de voluntários</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ROLES ===== -->
+    <section id="funcoes" class="roles">
+      <div class="roles-box">
+        <div class="roles-header">
+          <h2 class="roles-title" data-i18n="roles.title">Onde você pode atuar?</h2>
+          <p class="roles-aside" data-i18n="roles.aside">Dez tipos de funções para encontrar o seu papel ideal nos eventos.</p>
+        </div>
+        <div class="roles-grid">
+          <div class="role-card">
+            <img class="role-card-img" src="assets/roles-kits.jpg" alt="" loading="lazy" width="800" height="800">
+            <div class="role-card-number">01</div>
+            <div class="role-card-label" data-i18n="roles.items.0">Entrega de Kits</div>
+          </div>
+          <div class="role-card">
+            <img class="role-card-img" src="assets/roles-hydration.jpg" alt="" loading="lazy" width="800" height="800">
+            <div class="role-card-number">02</div>
+            <div class="role-card-label" data-i18n="roles.items.1">Hidratação</div>
+          </div>
+          <div class="role-card">
+            <div class="role-card-number">03</div>
+            <div class="role-card-label" data-i18n="roles.items.2">Staff de Percurso</div>
+          </div>
+          <div class="role-card">
+            <div class="role-card-number">04</div>
+            <div class="role-card-label" data-i18n="roles.items.3">Guarda-volumes</div>
+          </div>
+          <div class="role-card">
+            <div class="role-card-number">05</div>
+            <div class="role-card-label" data-i18n="roles.items.4">Apoio na Largada</div>
+          </div>
+          <div class="role-card">
+            <div class="role-card-number">06</div>
+            <div class="role-card-label" data-i18n="roles.items.5">Apoio na Chegada</div>
+          </div>
+          <div class="role-card">
+            <img class="role-card-img" src="assets/roles-medals.jpg" alt="" loading="lazy" width="800" height="800">
+            <div class="role-card-number">07</div>
+            <div class="role-card-label" data-i18n="roles.items.6">Entrega de Medalhas</div>
+          </div>
+          <div class="role-card">
+            <div class="role-card-number">08</div>
+            <div class="role-card-label" data-i18n="roles.items.7">Informação ao Atleta</div>
+          </div>
+          <div class="role-card">
+            <div class="role-card-number">09</div>
+            <div class="role-card-label" data-i18n="roles.items.8">Controle de Acesso</div>
+          </div>
+          <div class="role-card">
+            <div class="role-card-number">10</div>
+            <div class="role-card-label" data-i18n="roles.items.9">Logística</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          VANMO<span class="highlight">.RUN</span>
+        </div>
+        <p class="footer-tagline" data-i18n="footer.tagline">A maior plataforma de conexão para o staff de corridas de rua no Brasil.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.platform">Plataforma</h4>
+        <ul class="footer-links">
+          <li><a href="#" data-i18n="footer.links.about">Sobre</a></li>
+          <li><a href="#" data-i18n="footer.links.blog">Blog</a></li>
+          <li><a href="#" data-i18n="footer.links.events">Eventos</a></li>
+          <li><a href="#" data-i18n="footer.links.community">Comunidade</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.support">Suporte</h4>
+        <ul class="footer-links">
+          <li><a href="#" data-i18n="footer.links.help">Central de ajuda</a></li>
+          <li><a href="#" data-i18n="footer.links.faq">FAQ</a></li>
+          <li><a href="#" data-i18n="footer.links.contact">Contato</a></li>
+          <li><a href="#" data-i18n="footer.links.partners">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.legal">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#" data-i18n="footer.links.terms">Termos de Uso</a></li>
+          <li><a href="#" data-i18n="footer.links.privacy">Política de Privacidade</a></li>
+          <li><a href="#" data-i18n="footer.links.guidelines">Diretrizes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copyright">© 2026 VANMO.RUN. Todos os direitos reservados.</span>
+      <span data-i18n="footer.signature">Feito para quem corre e para quem faz correr.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-header">
+      <h2 id="modalTitle" class="modal-title" data-i18n="modal.title">Seja um Voluntário</h2>
+      <button class="modal-close" id="modalClose" type="button" aria-label="Fechar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <form id="volunteerForm" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="fieldNome" data-i18n="modal.nome">Nome *</label>
+        <input class="form-input" type="text" id="fieldNome" placeholder="Seu nome completo" data-i18n-attr="placeholder:modal.placeholderNome" required>
+        <span class="form-error" id="errorNome"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="fieldEmail" data-i18n="modal.email">E-mail *</label>
+        <input class="form-input" type="email" id="fieldEmail" placeholder="seu@email.com" data-i18n-attr="placeholder:modal.placeholderEmail" required>
+        <span class="form-error" id="errorEmail"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="modal.telefone">Telefone *</label>
+        <div class="phone-group">
+          <div class="autocomplete-wrapper ddi-wrapper">
+            <input class="form-input ddi-input" type="text" id="fieldDDI" value="🇺🇸 +1" data-ddi="+1" autocomplete="off">
+            <div class="autocomplete-list" id="ddiResults"></div>
+          </div>
+          <input class="form-input phone-input" type="tel" id="fieldPhone" placeholder="(XXX) XXX-XXXX" data-i18n-attr="placeholder:modal.placeholderPhone" required>
+        </div>
+        <span class="form-error" id="errorPhone"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="fieldCity" data-i18n="modal.cidade">Cidade *</label>
+        <div class="autocomplete-wrapper">
+          <input class="form-input" type="text" id="fieldCity" placeholder="Digite uma cidade" data-i18n-attr="placeholder:modal.placeholderCidade" autocomplete="off" required>
+          <div class="autocomplete-list" id="cityResults"></div>
+        </div>
+        <span class="form-error" id="errorCity"></span>
+      </div>
+      <button class="btn-primary form-submit" type="submit" data-i18n="modal.submit">Quero ser voluntário</button>
+    </form>
+    <form id="organizerForm" class="form-hidden" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="fieldCompany" data-i18n="modalOrganizer.company">Company *</label>
+        <input class="form-input" type="text" id="fieldCompany" placeholder="Company name" data-i18n-attr="placeholder:modalOrganizer.placeholderCompany" required>
+        <span class="form-error" id="errorCompany"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="fieldResponsible" data-i18n="modalOrganizer.responsible">Responsible *</label>
+        <input class="form-input" type="text" id="fieldResponsible" placeholder="Responsible person" data-i18n-attr="placeholder:modalOrganizer.placeholderResponsible" required>
+        <span class="form-error" id="errorResponsible"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="fieldOrganizerEmail" data-i18n="modal.email">E-mail *</label>
+        <input class="form-input" type="email" id="fieldOrganizerEmail" placeholder="contact@company.com" data-i18n-attr="placeholder:modalOrganizer.placeholderEmail" required>
+        <span class="form-error" id="errorOrganizerEmail"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="modal.telefone">Telefone *</label>
+        <div class="phone-group">
+          <div class="autocomplete-wrapper ddi-wrapper">
+            <input class="form-input ddi-input" type="text" id="fieldOrganizerDDI" value="🇺🇸 +1" data-ddi="+1" autocomplete="off">
+            <div class="autocomplete-list" id="organizerDdiResults"></div>
+          </div>
+          <input class="form-input phone-input" type="tel" id="fieldOrganizerPhone" placeholder="(XXX) XXX-XXXX" required>
+        </div>
+        <span class="form-error" id="errorOrganizerPhone"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="fieldWebsite" data-i18n="modalOrganizer.website">Website (optional)</label>
+        <input class="form-input" type="url" id="fieldWebsite" placeholder="https://example.com" data-i18n-attr="placeholder:modalOrganizer.placeholderWebsite">
+        <span class="form-error" id="errorWebsite"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="fieldInstagram" data-i18n="modalOrganizer.instagram">Instagram (optional)</label>
+        <input class="form-input" type="text" id="fieldInstagram" placeholder="@company" data-i18n-attr="placeholder:modalOrganizer.placeholderInstagram">
+        <span class="form-error" id="errorInstagram"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="fieldOrganizerCity" data-i18n="modal.cidade">Cidade *</label>
+        <div class="autocomplete-wrapper">
+          <input class="form-input" type="text" id="fieldOrganizerCity" placeholder="Type a city" data-i18n-attr="placeholder:modal.placeholderCidade" autocomplete="off" required>
+          <div class="autocomplete-list" id="organizerCityResults"></div>
+        </div>
+        <span class="form-error" id="errorOrganizerCity"></span>
+      </div>
+      <button class="btn-primary form-submit" type="submit" data-i18n="modalOrganizer.submit">Submit organizer request</button>
+    </form>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast"></div>
+
+<script src="translations.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="firebase.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
