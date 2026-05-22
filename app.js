@@ -398,12 +398,18 @@ function clearFormState(form) {
 
 function isOptionalUrl(value) {
   if (!value) return true;
+  const candidate = /^https?:\/\//i.test(value) ? value : `https://${value}`;
   try {
-    new URL(value);
+    new URL(candidate);
     return true;
   } catch {
     return false;
   }
+}
+
+function clearOptionalField(id, errorId) {
+  document.getElementById(id).classList.remove("error");
+  document.getElementById(errorId).textContent = "";
 }
 
 function setupVolunteerForm() {
@@ -476,7 +482,8 @@ function setupOrganizerForm() {
     const validResponsible = validateField("fieldResponsible", "errorResponsible", v => v.length >= 2);
     const validEmail = validateField("fieldOrganizerEmail", "errorOrganizerEmail", v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
     const validPhone = validateField("fieldOrganizerPhone", "errorOrganizerPhone", v => v.replace(/\D/g, "").length >= 8);
-    const validWebsite = validateField("fieldWebsite", "errorWebsite", isOptionalUrl);
+    if (!website) clearOptionalField("fieldWebsite", "errorWebsite");
+    const validWebsite = !website || validateField("fieldWebsite", "errorWebsite", isOptionalUrl);
     const validCity = validateField("fieldOrganizerCity", "errorOrganizerCity", v => v.length >= 2);
 
     if (!validCompany || !validResponsible || !validEmail || !validPhone || !validWebsite || !validCity) {
@@ -514,7 +521,15 @@ function setupOrganizerForm() {
   document.getElementById("fieldResponsible").addEventListener("blur", () => validateField("fieldResponsible", "errorResponsible", v => v.length >= 2));
   document.getElementById("fieldOrganizerEmail").addEventListener("blur", () => validateField("fieldOrganizerEmail", "errorOrganizerEmail", v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)));
   document.getElementById("fieldOrganizerPhone").addEventListener("blur", () => validateField("fieldOrganizerPhone", "errorOrganizerPhone", v => v.replace(/\D/g, "").length >= 8));
-  document.getElementById("fieldWebsite").addEventListener("blur", () => validateField("fieldWebsite", "errorWebsite", isOptionalUrl));
+  document.getElementById("fieldWebsite").addEventListener("blur", () => {
+    const field = document.getElementById("fieldWebsite");
+    if (!field.value.trim()) {
+      field.classList.remove("error");
+      document.getElementById("errorWebsite").textContent = "";
+      return;
+    }
+    validateField("fieldWebsite", "errorWebsite", isOptionalUrl);
+  });
   document.getElementById("fieldOrganizerCity").addEventListener("blur", () => validateField("fieldOrganizerCity", "errorOrganizerCity", v => v.length >= 2));
 }
 

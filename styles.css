@@ -1190,6 +1190,7 @@ select { font-family: inherit; }
 }
 
 .ddi-wrapper {
+  flex: 0 0 90px;
   min-width: 90px;
 }
 
@@ -1199,6 +1200,7 @@ select { font-family: inherit; }
 
 .phone-input {
   flex: 1;
+  min-width: 0;
 }
 
 .form-submit {
@@ -1296,4 +1298,93 @@ select { font-family: inherit; }
 @media (max-width: 480px) {
   .modal { padding: 1.5rem; }
   .toast { white-space: normal; text-align: center; max-width: 90vw; }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-headline {
+    font-size: 2rem;
+    line-height: 1.02;
+    overflow-wrap: break-word;
+  }
+
+  .hero-sub {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    font-size: 0.75rem;
+    line-height: 1.15;
+    white-space: normal;
+  }
+
+  .value-organizers {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .value-title {
+    font-size: 1.875rem;
+    line-height: 1.08;
+    overflow-wrap: break-word;
+  }
+
+  .roles {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .roles-box {
+    padding: 1.25rem;
+  }
+
+  .role-card {
+    padding: 0.875rem;
+  }
+
+  .role-card-label {
+    font-size: 0.8125rem;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  .ddi-wrapper {
+    flex-basis: 76px;
+    min-width: 76px;
+  }
+
+  .ddi-input {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .phone-group {
+    flex-direction: column;
+  }
+
+  .ddi-wrapper {
+    flex-basis: auto;
+    min-width: 100%;
+  }
+
+  .ddi-input {
+    border-right: 1px solid rgb(var(--foreground) / 0.15);
+    border-bottom: none;
+  }
 }
