@@ -1301,6 +1301,64 @@ select { font-family: inherit; }
 }
 
 @media (max-width: 480px) {
+  #modalOverlay {
+    align-items: stretch;
+    padding: 0;
+  }
+
+  #modalOverlay .modal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  #modalOverlay .modal-header {
+    flex: 0 0 auto;
+    gap: 1rem;
+    margin-bottom: 0;
+    padding: calc(1rem + env(safe-area-inset-top)) 1rem 1rem;
+    border-bottom: 1px solid rgb(var(--foreground) / 0.08);
+    background: rgb(var(--background));
+  }
+
+  #modalOverlay .modal-title {
+    min-width: 0;
+    font-size: 1.125rem;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  #modalOverlay .modal-close {
+    flex: 0 0 2.25rem;
+  }
+
+  #modalOverlay form {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #modalOverlay .form-submit {
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+    margin-top: 1rem;
+    box-shadow: 0 -0.75rem 1.25rem rgb(var(--background));
+  }
+
+  #modalOverlay .form-hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
   .hero {
     padding-left: 1rem;
     padding-right: 1rem;
