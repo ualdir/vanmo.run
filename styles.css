@@ -1420,14 +1420,19 @@ select { font-family: inherit; }
   }
 
   .ddi-wrapper {
-    flex-basis: 76px;
-    min-width: 76px;
+    flex-basis: 84px;
+    min-width: 84px;
   }
 
   .ddi-input {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    font-size: 0.8125rem;
+  }
+
+  #modalOverlay .form-input,
+  #modalOverlay select,
+  #modalOverlay textarea {
+    font-size: 16px;
   }
 }
 
