@@ -23,7 +23,9 @@ function changeLanguage(lng) {
     if (attr && key) el.setAttribute(attr, t(key));
   });
 
-  document.getElementById("current-lang").textContent = lng.toUpperCase();
+  document.querySelectorAll(".current-lang").forEach(el => {
+    el.textContent = lng.toUpperCase();
+  });
 
   document.title = t("seo.title");
   const metaDesc = document.querySelector('meta[name="description"]');
@@ -41,12 +43,14 @@ function initI18n() {
   const detected = supported.includes(saved) ? saved :
                    supported.includes(browser) ? browser : "en";
 
-  document.getElementById("lang-select").value = detected;
-  changeLanguage(detected);
-
-  document.getElementById("lang-select").addEventListener("change", e => {
-    changeLanguage(e.target.value);
+  document.querySelectorAll(".lang-select").forEach((sel, _, all) => {
+    sel.value = detected;
+    sel.addEventListener("change", e => {
+      all.forEach(s => s.value = e.target.value);
+      changeLanguage(e.target.value);
+    });
   });
+  changeLanguage(detected);
 }
 
 /* ===== MODAL ===== */
@@ -74,6 +78,17 @@ function openModal(mode = "volunteer") {
 
 function closeModal() {
   document.getElementById("modalOverlay").classList.remove("modal--open");
+  document.body.style.overflow = "";
+}
+
+function openPrivacyModal() {
+  document.getElementById("privacyOverlay").classList.add("modal--open");
+  document.body.style.overflow = "hidden";
+  setTimeout(() => document.getElementById("privacyClose").focus(), 100);
+}
+
+function closePrivacyModal() {
+  document.getElementById("privacyOverlay").classList.remove("modal--open");
   document.body.style.overflow = "";
 }
 
@@ -513,7 +528,18 @@ function initModal() {
   document.querySelectorAll(".btn-login").forEach(btn => btn.addEventListener("click", () => openModal("volunteer")));
   document.getElementById("modalClose").addEventListener("click", closeModal);
   document.getElementById("modalOverlay").addEventListener("click", e => { if (e.target === e.currentTarget) closeModal(); });
-  document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+  document.getElementById("privacyLink").addEventListener("click", e => {
+    e.preventDefault();
+    openPrivacyModal();
+  });
+  document.getElementById("privacyClose").addEventListener("click", closePrivacyModal);
+  document.getElementById("privacyOverlay").addEventListener("click", e => { if (e.target === e.currentTarget) closePrivacyModal(); });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      closeModal();
+      closePrivacyModal();
+    }
+  });
   setupPhoneMask("fieldPhone", "fieldDDI");
   setupPhoneMask("fieldOrganizerPhone", "fieldOrganizerDDI");
   setupCityAutocomplete("fieldCity", "cityResults", (state, country) => {
@@ -530,7 +556,32 @@ function initModal() {
   setupOrganizerForm();
 }
 
+function initBurger() {
+  const nav = document.querySelector(".nav");
+  const btn = document.querySelector(".burger-btn");
+  const dropdown = document.querySelector(".burger-dropdown");
+  if (!btn || !nav) return;
+
+  btn.addEventListener("click", e => {
+    e.stopPropagation();
+    nav.classList.toggle("nav--open");
+  });
+
+  dropdown.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("nav--open");
+    });
+  });
+
+  document.addEventListener("click", e => {
+    if (nav.classList.contains("nav--open") && !nav.contains(e.target)) {
+      nav.classList.remove("nav--open");
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initI18n();
   initModal();
+  initBurger();
 });

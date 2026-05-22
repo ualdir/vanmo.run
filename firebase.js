@@ -6,6 +6,9 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+const appCheck = firebase.appCheck();
+appCheck.activate('6LcMQ_csAAAAAO7Ut6RcmEmoX4Q4XVs6siO72LNv', true);
+
 const auth = firebase.auth();
 const db = firebase.firestore();
 

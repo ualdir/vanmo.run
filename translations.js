@@ -1,6 +1,6 @@
 const translations = {
   pt: {
-    nav: { howItWorks: "Como funciona", benefits: "Benefícios", roles: "Funções", organizers: "Organizadores", login: "Entrar" },
+    nav: { menu: "Menu", howItWorks: "Como funciona", benefits: "Benefícios", roles: "Funções", organizers: "Organizadores", login: "Entrar" },
     hero: {
       headlineBefore: "Conectamos voluntários apaixonados por corrida aos ",
       headlineHighlight: "maiores eventos",
@@ -64,11 +64,27 @@ const translations = {
       items: ["Entrega de Kits", "Hidratação", "Staff de Percurso", "Guarda-volumes", "Apoio na Largada", "Apoio na Chegada", "Entrega de Medalhas", "Informação ao Atleta", "Controle de Acesso", "Logística"]
     },
     footer: {
-      tagline: "A maior plataforma de conexão para o staff de corridas de rua no Brasil.",
+      tagline: "A maior plataforma de conexão para o staff de corridas de rua .",
       platform: "Plataforma", support: "Suporte", legal: "Legal",
       links: { about: "Sobre", blog: "Blog", events: "Eventos", community: "Comunidade", help: "Central de ajuda", faq: "FAQ", contact: "Contato", partners: "Parceiros", terms: "Termos de Uso", privacy: "Política de Privacidade", guidelines: "Diretrizes" },
       copyright: "© 2026 VANMO.RUN. Todos os direitos reservados.",
       signature: "Feito para quem corre e para quem faz correr."
+    },
+    privacy: {
+      title: "Política de Privacidade",
+      updated: "Última atualização: Maio de 2026",
+      intro: "Esta Política de Privacidade descreve como coletamos, utilizamos e protegemos as informações dos usuários da plataforma de voluntariado para eventos esportivos e corridas de rua.",
+      sections: {
+        data: { title: "1. Dados coletados", body: "Podemos coletar as seguintes informações fornecidas pelos usuários:", items: ["Nome completo", "E-mail", "Telefone", "Cidade e estado"] },
+        use: { title: "2. Uso das informações", body: "Os dados coletados são utilizados exclusivamente para:", items: ["Cadastro e autenticação na plataforma", "Participação em eventos", "Comunicação operacional sobre eventos", "Emissão de certificados"], note: "Não utilizamos os dados dos usuários para marketing, publicidade ou compartilhamento comercial com terceiros." },
+        sharing: { title: "3. Compartilhamento de dados", body: "As informações poderão ser compartilhadas apenas com organizadores dos eventos nos quais o voluntário participar, exclusivamente para fins operacionais relacionados ao evento.", note: "Não vendemos, alugamos ou comercializamos dados pessoais." },
+        security: { title: "4. Segurança das informações", body: "Adotamos medidas técnicas e organizacionais para proteger os dados pessoais contra acesso não autorizado, alteração, divulgação ou destruição indevida." },
+        storage: { title: "5. Armazenamento dos dados", body: "Os dados serão armazenados apenas pelo tempo necessário para o funcionamento da plataforma e cumprimento de obrigações legais e operacionais." },
+        rights: { title: "6. Direitos do usuário", body: "O usuário poderá, a qualquer momento:", items: ["Solicitar acesso aos seus dados", "Corrigir informações incorretas", "Solicitar exclusão dos dados pessoais"] },
+        cookies: { title: "7. Cookies e tecnologias similares", body: "Não utilizamos cookies para publicidade ou rastreamento comercial." },
+        changes: { title: "8. Alterações nesta política", body: "Esta Política de Privacidade poderá ser atualizada periodicamente. Recomendamos a revisão regular deste documento." },
+        contact: { title: "9. Contato", body: "Em caso de dúvidas sobre esta Política de Privacidade, entre em contato através dos canais oficiais da plataforma." }
+      }
     },
     seo: { title: "VANMO.RUN — Voluntariado em corridas de rua", description: "Conectamos voluntários apaixonados por corrida aos maiores eventos esportivos. Organize equipes, encontre oportunidades e viva os bastidores das maiores provas." },
     language: { label: "Idioma" },
@@ -78,7 +94,7 @@ const translations = {
   },
 
   en: {
-    nav: { howItWorks: "How it works", benefits: "Benefits", roles: "Roles", organizers: "Organizers", login: "Sign in" },
+    nav: { menu: "Menu", howItWorks: "How it works", benefits: "Benefits", roles: "Roles", organizers: "Organizers", login: "Sign in" },
     hero: {
       headlineBefore: "We connect running enthusiasts to the ",
       headlineHighlight: "biggest sporting events",
@@ -142,11 +158,27 @@ const translations = {
       items: ["Kit Pickup", "Hydration", "Course Staff", "Bag Drop", "Start Support", "Finish Support", "Medal Handout", "Athlete Info", "Access Control", "Logistics"]
     },
     footer: {
-      tagline: "The largest platform connecting staff to road races in Brazil.",
+      tagline: "The largest platform connecting staff to road races.",
       platform: "Platform", support: "Support", legal: "Legal",
       links: { about: "About", blog: "Blog", events: "Events", community: "Community", help: "Help center", faq: "FAQ", contact: "Contact", partners: "Partners", terms: "Terms of Use", privacy: "Privacy Policy", guidelines: "Guidelines" },
       copyright: "© 2026 VANMO.RUN. All rights reserved.",
       signature: "Built for those who run and those who make running happen."
+    },
+    privacy: {
+      title: "Privacy Policy",
+      updated: "Last updated: May 2026",
+      intro: "This Privacy Policy describes how we collect, use and protect information from users of the volunteering platform for sporting events and road races.",
+      sections: {
+        data: { title: "1. Data collected", body: "We may collect the following information provided by users:", items: ["Full name", "Email", "Phone", "City and state"] },
+        use: { title: "2. Use of information", body: "The data collected is used exclusively for:", items: ["Registration and authentication on the platform", "Participation in events", "Operational communication about events", "Issuing certificates"], note: "We do not use user data for marketing, advertising or commercial sharing with third parties." },
+        sharing: { title: "3. Data sharing", body: "Information may be shared only with organizers of events in which the volunteer participates, exclusively for operational purposes related to the event.", note: "We do not sell, rent or commercialize personal data." },
+        security: { title: "4. Information security", body: "We adopt technical and organizational measures to protect personal data against unauthorized access, alteration, disclosure or improper destruction." },
+        storage: { title: "5. Data storage", body: "Data will be stored only for the time necessary for the platform to operate and to fulfill legal and operational obligations." },
+        rights: { title: "6. User rights", body: "Users may, at any time:", items: ["Request access to their data", "Correct inaccurate information", "Request deletion of personal data"] },
+        cookies: { title: "7. Cookies and similar technologies", body: "We do not use cookies for advertising or commercial tracking." },
+        changes: { title: "8. Changes to this policy", body: "This Privacy Policy may be updated periodically. We recommend reviewing this document regularly." },
+        contact: { title: "9. Contact", body: "If you have questions about this Privacy Policy, please contact us through the platform's official channels." }
+      }
     },
     seo: { title: "VANMO.RUN — Volunteering at road races", description: "We connect passionate runners as volunteers to the biggest sporting events. Organize teams, find opportunities and live the backstage of the biggest races." },
     language: { label: "Language" },
@@ -156,7 +188,7 @@ const translations = {
   },
 
   es: {
-    nav: { howItWorks: "Cómo funciona", benefits: "Beneficios", roles: "Funciones", organizers: "Organizadores", login: "Entrar" },
+    nav: { menu: "Menú", howItWorks: "Cómo funciona", benefits: "Beneficios", roles: "Funciones", organizers: "Organizadores", login: "Entrar" },
     hero: {
       headlineBefore: "Conectamos voluntarios apasionados por el running a los ",
       headlineHighlight: "mayores eventos",
@@ -220,11 +252,27 @@ const translations = {
       items: ["Entrega de Kits", "Hidratación", "Staff de Recorrido", "Guardarropa", "Apoyo en Largada", "Apoyo en Meta", "Entrega de Medallas", "Información al Atleta", "Control de Acceso", "Logística"]
     },
     footer: {
-      tagline: "La mayor plataforma de conexión para el staff de carreras de calle en Brasil.",
+      tagline: "La mayor plataforma de conexión para el staff de carreras de calle.",
       platform: "Plataforma", support: "Soporte", legal: "Legal",
       links: { about: "Nosotros", blog: "Blog", events: "Eventos", community: "Comunidad", help: "Centro de ayuda", faq: "FAQ", contact: "Contacto", partners: "Aliados", terms: "Términos de Uso", privacy: "Política de Privacidad", guidelines: "Directrices" },
       copyright: "© 2026 VANMO.RUN. Todos los derechos reservados.",
       signature: "Hecho para quien corre y para quien hace correr."
+    },
+    privacy: {
+      title: "Política de Privacidad",
+      updated: "Última actualización: Mayo de 2026",
+      intro: "Esta Política de Privacidad describe cómo recopilamos, utilizamos y protegemos la información de los usuarios de la plataforma de voluntariado para eventos deportivos y carreras de calle.",
+      sections: {
+        data: { title: "1. Datos recopilados", body: "Podemos recopilar la siguiente información proporcionada por los usuarios:", items: ["Nombre completo", "Correo electrónico", "Teléfono", "Ciudad y estado"] },
+        use: { title: "2. Uso de la información", body: "Los datos recopilados se utilizan exclusivamente para:", items: ["Registro y autenticación en la plataforma", "Participación en eventos", "Comunicación operativa sobre eventos", "Emisión de certificados"], note: "No utilizamos los datos de los usuarios para marketing, publicidad ni intercambio comercial con terceros." },
+        sharing: { title: "3. Compartición de datos", body: "La información podrá compartirse únicamente con organizadores de los eventos en los que participe el voluntario, exclusivamente para fines operativos relacionados con el evento.", note: "No vendemos, alquilamos ni comercializamos datos personales." },
+        security: { title: "4. Seguridad de la información", body: "Adoptamos medidas técnicas y organizativas para proteger los datos personales contra acceso no autorizado, alteración, divulgación o destrucción indebida." },
+        storage: { title: "5. Almacenamiento de datos", body: "Los datos se almacenarán solo durante el tiempo necesario para el funcionamiento de la plataforma y el cumplimiento de obligaciones legales y operativas." },
+        rights: { title: "6. Derechos del usuario", body: "El usuario podrá, en cualquier momento:", items: ["Solicitar acceso a sus datos", "Corregir información incorrecta", "Solicitar la eliminación de datos personales"] },
+        cookies: { title: "7. Cookies y tecnologías similares", body: "No utilizamos cookies para publicidad ni rastreo comercial." },
+        changes: { title: "8. Cambios en esta política", body: "Esta Política de Privacidad podrá actualizarse periódicamente. Recomendamos revisar regularmente este documento." },
+        contact: { title: "9. Contacto", body: "En caso de dudas sobre esta Política de Privacidad, ponte en contacto a través de los canales oficiales de la plataforma." }
+      }
     },
     seo: { title: "VANMO.RUN — Voluntariado en carreras de calle", description: "Conectamos voluntarios apasionados por el running a los mayores eventos deportivos. Organiza equipos, encuentra oportunidades y vive el detrás de las grandes carreras." },
     language: { label: "Idioma" },
@@ -234,7 +282,7 @@ const translations = {
   },
 
   fr: {
-    nav: { howItWorks: "Comment ça marche", benefits: "Avantages", roles: "Postes", organizers: "Organisateurs", login: "Se connecter" },
+    nav: { menu: "Menu", howItWorks: "Comment ça marche", benefits: "Avantages", roles: "Postes", organizers: "Organisateurs", login: "Se connecter" },
     hero: {
       headlineBefore: "Nous connectons des bénévoles passionnés de course aux ",
       headlineHighlight: "plus grands événements",
@@ -298,11 +346,27 @@ const translations = {
       items: ["Retrait des Kits", "Ravitaillement", "Staff de Parcours", "Vestiaire", "Soutien au Départ", "Soutien à l'Arrivée", "Remise des Médailles", "Information Athlètes", "Contrôle d'Accès", "Logistique"]
     },
     footer: {
-      tagline: "La plus grande plateforme connectant le staff aux courses sur route au Brésil.",
+      tagline: "La plus grande plateforme connectant le staff aux courses sur route.",
       platform: "Plateforme", support: "Support", legal: "Légal",
       links: { about: "À propos", blog: "Blog", events: "Événements", community: "Communauté", help: "Centre d'aide", faq: "FAQ", contact: "Contact", partners: "Partenaires", terms: "Conditions d'utilisation", privacy: "Politique de confidentialité", guidelines: "Directives" },
       copyright: "© 2026 VANMO.RUN. Tous droits réservés.",
       signature: "Conçu pour ceux qui courent et ceux qui font courir."
+    },
+    privacy: {
+      title: "Politique de Confidentialité",
+      updated: "Dernière mise à jour : Mai 2026",
+      intro: "Cette Politique de Confidentialité décrit comment nous collectons, utilisons et protégeons les informations des utilisateurs de la plateforme de bénévolat pour les événements sportifs et les courses sur route.",
+      sections: {
+        data: { title: "1. Données collectées", body: "Nous pouvons collecter les informations suivantes fournies par les utilisateurs :", items: ["Nom complet", "E-mail", "Téléphone", "Ville et état"] },
+        use: { title: "2. Utilisation des informations", body: "Les données collectées sont utilisées exclusivement pour :", items: ["Inscription et authentification sur la plateforme", "Participation aux événements", "Communication opérationnelle sur les événements", "Émission de certificats"], note: "Nous n'utilisons pas les données des utilisateurs à des fins de marketing, de publicité ou de partage commercial avec des tiers." },
+        sharing: { title: "3. Partage des données", body: "Les informations pourront être partagées uniquement avec les organisateurs des événements auxquels le bénévole participe, exclusivement à des fins opérationnelles liées à l'événement.", note: "Nous ne vendons, ne louons ni ne commercialisons les données personnelles." },
+        security: { title: "4. Sécurité des informations", body: "Nous adoptons des mesures techniques et organisationnelles pour protéger les données personnelles contre l'accès non autorisé, l'altération, la divulgation ou la destruction indue." },
+        storage: { title: "5. Conservation des données", body: "Les données seront conservées uniquement pendant la durée nécessaire au fonctionnement de la plateforme et au respect des obligations légales et opérationnelles." },
+        rights: { title: "6. Droits de l'utilisateur", body: "L'utilisateur peut, à tout moment :", items: ["Demander l'accès à ses données", "Corriger les informations incorrectes", "Demander la suppression des données personnelles"] },
+        cookies: { title: "7. Cookies et technologies similaires", body: "Nous n'utilisons pas de cookies à des fins publicitaires ou de suivi commercial." },
+        changes: { title: "8. Modifications de cette politique", body: "Cette Politique de Confidentialité pourra être mise à jour périodiquement. Nous recommandons de consulter régulièrement ce document." },
+        contact: { title: "9. Contact", body: "Pour toute question concernant cette Politique de Confidentialité, contactez-nous via les canaux officiels de la plateforme." }
+      }
     },
     seo: { title: "VANMO.RUN — Bénévolat sur les courses sur route", description: "Nous connectons des coureurs passionnés en tant que bénévoles aux plus grands événements sportifs. Organisez les équipes, trouvez des opportunités et vivez les coulisses des grandes courses." },
     language: { label: "Langue" },

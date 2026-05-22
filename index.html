@@ -6,6 +6,11 @@
   <title>VANMO.RUN — Voluntariado em corridas de rua</title>
   <meta name="description" content="Conectamos voluntários apaixonados por corrida aos maiores eventos esportivos do Brasil.">
   <meta name="author" content="VANMO.RUN">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com https://*.firebaseio.com https://apis.google.com https://www.google.com; connect-src 'self' https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://photon.komoot.io https://www.google.com https://www.gstatic.com; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com;"><｜end▁of▁thinking｜>
+
+<｜｜DSML｜｜tool_calls>
+<｜｜DSML｜｜invoke name="todowrite">
+<｜｜DSML｜｜parameter name="todos" string="false">[{"content": "Adicionar meta tag CSP no index.html", "status": "completed", "priority": "high"}, {"content": "Aplicar Firestore Security Rules no Console Firebase", "status": "pending", "priority": "high"}, {"content": "Ativar Firebase App Check com reCAPTCHA v3", "status": "pending", "priority": "medium"}]
   <meta property="og:title" content="VANMO.RUN — Voluntariado em corridas de rua">
   <meta property="og:description" content="Conectamos voluntários apaixonados por corrida aos maiores eventos esportivos do Brasil.">
   <meta property="og:type" content="website">
@@ -37,8 +42,8 @@
             <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
           </svg>
           <span class="sr-only" data-i18n="language.label">Idioma</span>
-          <span id="current-lang" aria-hidden="true">PT</span>
-          <select id="lang-select" aria-label="Idioma">
+           <span class="current-lang" aria-hidden="true">PT</span>
+           <select class="lang-select" aria-label="Idioma">
             <option value="pt">PT</option>
             <option value="en">EN</option>
             <option value="es">ES</option>
@@ -46,7 +51,35 @@
           </select>
         </label>
         <button class="btn-login" data-i18n="nav.login">Entrar</button>
+        <button class="burger-btn" aria-label="Menu" data-i18n-attr="aria-label:nav.menu">
+          <span class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
       </div>
+    </div>
+    <div class="burger-dropdown">
+      <a href="#como-funciona" data-i18n="nav.howItWorks">Como funciona</a>
+      <a href="#beneficios" data-i18n="nav.benefits">Benefícios</a>
+      <a href="#funcoes" data-i18n="nav.roles">Funções</a>
+      <a href="#organizadores" data-i18n="nav.organizers">Organizadores</a>
+      <hr>
+      <label class="lang-switcher">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span class="sr-only" data-i18n="language.label">Idioma</span>
+        <span class="current-lang" aria-hidden="true">PT</span>
+        <select class="lang-select" aria-label="Idioma">
+          <option value="pt">PT</option>
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+        </select>
+      </label>
+      <button class="btn-login" data-i18n="nav.login">Entrar</button>
     </div>
   </nav>
 
@@ -379,19 +412,19 @@
         <div class="footer-brand">
           VANMO<span class="highlight">.RUN</span>
         </div>
-        <p class="footer-tagline" data-i18n="footer.tagline">A maior plataforma de conexão para o staff de corridas de rua no Brasil.</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">A maior plataforma de conexão para o staff de corridas de rua .</p>
         <div class="footer-social">
-          <a href="#" aria-label="Instagram">
+          <a href="https://www.instagram.com/vanmo.run" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
             </svg>
           </a>
-          <a href="#" aria-label="Facebook">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          <a href="https://www.strava.com/clubs/1803420" target="_blank" rel="noopener noreferrer" aria-label="Strava">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M15.4 17.2l-3.4-6.7-3.4 6.7H5.2L12 3.8l6.8 13.4h-3.4zM15.4 20.2l-1.7-3.4h3.4l-1.7 3.4z"/>
             </svg>
           </a>
-          <a href="#" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/vanmo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
             </svg>
@@ -412,7 +445,7 @@
         <ul class="footer-links">
           <li><a href="#" data-i18n="footer.links.help">Central de ajuda</a></li>
           <li><a href="#" data-i18n="footer.links.faq">FAQ</a></li>
-          <li><a href="#" data-i18n="footer.links.contact">Contato</a></li>
+          <li><a href="mailto:contato@vanmo.com.br" data-i18n="footer.links.contact">Contato</a></li>
           <li><a href="#" data-i18n="footer.links.partners">Parceiros</a></li>
         </ul>
       </div>
@@ -420,7 +453,7 @@
         <h4 class="footer-col-title" data-i18n="footer.legal">Legal</h4>
         <ul class="footer-links">
           <li><a href="#" data-i18n="footer.links.terms">Termos de Uso</a></li>
-          <li><a href="#" data-i18n="footer.links.privacy">Política de Privacidade</a></li>
+          <li><a href="#privacidade" id="privacyLink" data-i18n="footer.links.privacy">Política de Privacidade</a></li>
           <li><a href="#" data-i18n="footer.links.guidelines">Diretrizes</a></li>
         </ul>
       </div>
@@ -525,6 +558,88 @@
   </div>
 </div>
 
+<!-- ===== PRIVACY POLICY ===== -->
+<div class="modal-overlay" id="privacyOverlay">
+  <div class="modal privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+    <div class="modal-header">
+      <h2 id="privacyTitle" class="modal-title" data-i18n="privacy.title">Política de Privacidade</h2>
+      <button class="modal-close" id="privacyClose" type="button" aria-label="Fechar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="privacy-content">
+      <p class="privacy-updated" data-i18n="privacy.updated">Última atualização: Maio de 2026</p>
+      <p data-i18n="privacy.intro">Esta Política de Privacidade descreve como coletamos, utilizamos e protegemos as informações dos usuários da plataforma de voluntariado para eventos esportivos e corridas de rua.</p>
+
+      <section>
+        <h3 data-i18n="privacy.sections.data.title">1. Dados coletados</h3>
+        <p data-i18n="privacy.sections.data.body">Podemos coletar as seguintes informações fornecidas pelos usuários:</p>
+        <ul>
+          <li data-i18n="privacy.sections.data.items.0">Nome completo</li>
+          <li data-i18n="privacy.sections.data.items.1">E-mail</li>
+          <li data-i18n="privacy.sections.data.items.2">Telefone</li>
+          <li data-i18n="privacy.sections.data.items.3">Cidade e estado</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 data-i18n="privacy.sections.use.title">2. Uso das informações</h3>
+        <p data-i18n="privacy.sections.use.body">Os dados coletados são utilizados exclusivamente para:</p>
+        <ul>
+          <li data-i18n="privacy.sections.use.items.0">Cadastro e autenticação na plataforma</li>
+          <li data-i18n="privacy.sections.use.items.1">Participação em eventos</li>
+          <li data-i18n="privacy.sections.use.items.2">Comunicação operacional sobre eventos</li>
+          <li data-i18n="privacy.sections.use.items.3">Emissão de certificados</li>
+        </ul>
+        <p data-i18n="privacy.sections.use.note">Não utilizamos os dados dos usuários para marketing, publicidade ou compartilhamento comercial com terceiros.</p>
+      </section>
+
+      <section>
+        <h3 data-i18n="privacy.sections.sharing.title">3. Compartilhamento de dados</h3>
+        <p data-i18n="privacy.sections.sharing.body">As informações poderão ser compartilhadas apenas com organizadores dos eventos nos quais o voluntário participar, exclusivamente para fins operacionais relacionados ao evento.</p>
+        <p data-i18n="privacy.sections.sharing.note">Não vendemos, alugamos ou comercializamos dados pessoais.</p>
+      </section>
+
+      <section>
+        <h3 data-i18n="privacy.sections.security.title">4. Segurança das informações</h3>
+        <p data-i18n="privacy.sections.security.body">Adotamos medidas técnicas e organizacionais para proteger os dados pessoais contra acesso não autorizado, alteração, divulgação ou destruição indevida.</p>
+      </section>
+
+      <section>
+        <h3 data-i18n="privacy.sections.storage.title">5. Armazenamento dos dados</h3>
+        <p data-i18n="privacy.sections.storage.body">Os dados serão armazenados apenas pelo tempo necessário para o funcionamento da plataforma e cumprimento de obrigações legais e operacionais.</p>
+      </section>
+
+      <section>
+        <h3 data-i18n="privacy.sections.rights.title">6. Direitos do usuário</h3>
+        <p data-i18n="privacy.sections.rights.body">O usuário poderá, a qualquer momento:</p>
+        <ul>
+          <li data-i18n="privacy.sections.rights.items.0">Solicitar acesso aos seus dados</li>
+          <li data-i18n="privacy.sections.rights.items.1">Corrigir informações incorretas</li>
+          <li data-i18n="privacy.sections.rights.items.2">Solicitar exclusão dos dados pessoais</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 data-i18n="privacy.sections.cookies.title">7. Cookies e tecnologias similares</h3>
+        <p data-i18n="privacy.sections.cookies.body">Não utilizamos cookies para publicidade ou rastreamento comercial.</p>
+      </section>
+
+      <section>
+        <h3 data-i18n="privacy.sections.changes.title">8. Alterações nesta política</h3>
+        <p data-i18n="privacy.sections.changes.body">Esta Política de Privacidade poderá ser atualizada periodicamente. Recomendamos a revisão regular deste documento.</p>
+      </section>
+
+      <section>
+        <h3 data-i18n="privacy.sections.contact.title">9. Contato</h3>
+        <p data-i18n="privacy.sections.contact.body">Em caso de dúvidas sobre esta Política de Privacidade, entre em contato através dos canais oficiais da plataforma.</p>
+      </section>
+    </div>
+  </div>
+</div>
+
 <!-- ===== TOAST ===== -->
 <div class="toast" id="toast"></div>
 
@@ -532,6 +647,7 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-check-compat.js"></script>
 <script src="firebase.js"></script>
 <script src="app.js"></script>
 </body>
